@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <bundle url="features/org.abego.treelayout.core_0.0.0.jar" id="org.abego.treelayout.core" version="0.0.0">
+    <category name="org.abego.treelayout"/>
+   </bundle>
+</site>
