@@ -1,0 +1,16 @@
+sudo: false
+language: java
+jdk:
+- oraclejdk8
+script: mvn deploy
+after_success:
+#- git clone --depth=1 -b gh-pages https://${GH_TOKEN}@github.com/PizzaFactory/bits.git gh-pages
+#- cd gh-pages
+#- mvn process-resources install
+env:
+  global:
+  - MAVEN_OPTS=-Xmx1024m
+  - PIZZAFACTORY_VERSION=8.5
+  - GIT_COMMITTER_NAME="Masaki Muranaka"
+  - GIT_COMMITTER_EMAIL="monaka@monami-ya.jp"
+  - secure: "AWi6zB2JRWR3exaabuiDhlCPdK9JsjLXxZ5sBwjqZ6s2NY3gurLNfyBsq/hVcqM7ScFyxTwih7zbqG1dWSWY8cCZm8HE0cURjcmkfacVWdw+1siDRHt7OM9Xl2hu8PWHGG9iTAFis74I0X0fXQTkbsV6Knq/GZzPJm7lzoQhScQRlVYgpcTDlobN9avk7gsOKm55jjZDPtoAS8hJcuq1bJgb3BenGRcErPV0pXDCerUkLDGp/zFsbk/NQ0B/5ALosYmwDb9xV8ZFL1EhiD6jjEiYEW1C01jBN2vC1iBKQOVqyN59P16mdtAHLK6/pRupBqtZlRbtxqNzkJg6+gXJVE0LzHw9RV2PxqKHsV3OTDyB2IM7+w8YCRzPWEiAVMhwp3RogcQE7JZqWlUnVCcbJHXRbY8vJzUKLyYacbxcGrKgV/0iG9OkwHBGbyTl7TfMYxOV/k2TXSN2zVjb5n1QkO4ABUYX03Z6Eb2EYuP2yMS9oB3GdBLqNaDcdnnmwfp/JLXkTAyVStJmJtigNb0QEQznAkQMFiIznToIwF+OXXQ6mVM380xQvYzzPkMO/IV6lwElRMcAttMP9H3KcoPqrBvaAqpIui9QEVpa3wAaT2UkCWJ8hsXVsYjcY7GPgzncojzb8AAh4puq3Tj+22fAKzVBHhCoSazyyZ+2FampS54="
